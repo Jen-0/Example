@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test Bulb</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* select all to border-box */
+        * {
+            box-sizing: border-box;
+            background-color: #1f1f1f;
+        }
+
+        /*container for bulb and button division */
+        .container {
+            margin: 100px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+        }
+
+        /* Make an round shape bulb */
+        .bulb {
+            background-color: #fff;
+            padding: 80px;
+            border-radius: 100%;
+        }
+
+        /* Button Section */
+        .button {
+            margin-top: 100px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        /* Makeing buttons */
+        .button button {
+            margin: 40px;
+            width: 100px;
+            height: 30px;
+            padding: 4px;
+            background-color: #ddd;
+            border: none;
+            border-radius: 20px;
+            color: #008000;
+            cursor: pointer;
+        }
+
+        /* Change the text color of the Button2 to red */
+        .button #button2 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="bulb" class="bulb">Bulb</div>
+        <div class="button">
+            <button id="button1" onclick="switchon()">ON</button>
+            <button id="button2" onclick="switchoff()">OFF</button>
+        </div>
+    </div>
+    <script>
+        function switchon() {
+            document.getElementById("bulb").style.background = "yellow";
+            document.getElementById("bulb").style.webkitBoxShadow = " 0px 0px 30px 60px yellow";
+        }
+        function switchoff() {
+            document.getElementById("bulb").style.background = "white";
+            document.getElementById("bulb").style.webkitBoxShadow = "none";
+        }
+    </script>
+</body>
+
+</html>
